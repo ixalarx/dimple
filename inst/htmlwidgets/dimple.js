@@ -57,6 +57,12 @@ HTMLWidgets.widget({
       if("zOverrideMax" in config) z.overrideMax = config.zOverrideMax;
     }
 
+    if("axesFontSize" in config){
+      for (var i=0; i < myChart.axes.length; i++) {
+        myChart.axes[i].fontSize = config.axesFontSize;
+      }
+    }
+
     var chartTypes = {
       bar: dimple.plot.bar,
       pie: dimple.plot.pie,
