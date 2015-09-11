@@ -20,7 +20,7 @@
 #'
 #' @export
 dimple <- function(data, ..., chartType = "bar", stacked = ifelse(chartType %in% c("bar","area", "steparea"), T, F),
-                   width = 590, height = 400) {
+                   width = 590, height = 400, axesFontSize = 10) {
 
   config <- list(...)
   config$data <- data
@@ -28,6 +28,7 @@ dimple <- function(data, ..., chartType = "bar", stacked = ifelse(chartType %in%
   config$height <- height
   config$chartType <- chartType
   config$stacked <- stacked
+  config$axesFontSize <- axesFontSize
 
 
   # create widget
